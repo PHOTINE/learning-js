@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <script>
+        function processInput() {
+            let input = document.getElementById('parni').value
+            let splitInput = input.split("\n")
+            let splitOutput = []
+            for (let i = 0; i < splitInput.length; i++) {
+                if (splitInput[i].includes('@')) {
+                    splitOutput.push(splitInput[i])
+                }
+            }
+            let output = splitOutput.join("\n")
+            document.getElementById('pillow').value = output
+        }
+
+    </script>
+</head>
+
+<body>
+    Hi <b>hello B-boy</b> who is this
+    <br>
+    <textarea rows="10" cols="50" placeholder="Insert List Here" id="parni"></textarea>
+    <br>
+    <button onClick="processInput()">Submit</button>
+
+    <br>
+    <br> Output:
+
+    <br>
+
+    <textarea rows="10" cols="50" style="font-family:courier; color:blue; font-weight:bold" id="pillow">Hello</textarea>
+</body>
+
+</html>
